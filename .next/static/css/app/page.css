@@ -8,3 +8,21 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
   }
+
+.home_logo__owRWo {
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.home_mainLogo__3lGHX {
+  display: flex;
+  justify-content: center;
+}
+
+.home_width__A2Sa8 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 50%;
+}

@@ -5,3 +5,21 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
   }
+
+.logo {
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+}
+
+.width {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 50%;
+}
