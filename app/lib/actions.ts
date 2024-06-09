@@ -11,8 +11,8 @@ export async function createInvoice(formData: FormData) {
     };
     // Test it out:
     console.log(rawFormData);
-    revalidatePath('/dashboard/invoices');
-    redirect('/dashboard/invoices');
+    revalidatePath('/dashboard/contracts');
+    redirect('/dashboard/contracts');
 }
 
 

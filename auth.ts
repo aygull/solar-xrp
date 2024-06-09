@@ -21,17 +21,17 @@ async function getUser(email: string): Promise<User | undefined> {
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
-    // GoogleProvider({
-    //     clientId: process.env.GOOGLE_CLIENT_ID,
-    //     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    //     authorization: {
-    //         params: {
-    //           prompt: "consent",
-    //           access_type: "offline",
-    //           response_type: "code",
-    //         },
-    //       },
-    //   }),
+    GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        authorization: {
+            params: {
+              prompt: "consent",
+              access_type: "offline",
+              response_type: "code",
+            },
+          },
+      }),
     Credentials({
       async authorize(credentials) {
         const parsedCredentials = z
@@ -41,8 +41,8 @@ export const { auth, signIn, signOut } = NextAuth({
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
           const user = await getUser(email);
-          if (!user) {return null;}
-          const passwordsMatch = await bcrypt.compare(password, user.password);
+        //   if (!user) {return null;}
+          const passwordsMatch = await bcrypt.compare(password, user!.password);
  
           if (passwordsMatch) return user;
         }

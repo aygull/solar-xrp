@@ -1,7 +1,7 @@
 'use client';
 
 import {
-  UserGroupIcon,
+  WalletIcon,
   HomeIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
@@ -20,7 +20,7 @@ const links = [
     href: '/dashboard/contracts',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
+  { name: 'Wallet balance', href: '/dashboard/customers', icon: WalletIcon },
 ];
 
 export default function NavLinks() {
