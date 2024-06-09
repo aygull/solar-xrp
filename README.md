@@ -1,5 +1,3 @@
-## Next.js App Router Course - Starter
+## Optimize easy with XRP Ledger
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
-
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+This app will allow you to use blockchain for energy consumption
