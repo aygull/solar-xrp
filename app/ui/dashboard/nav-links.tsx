@@ -3,7 +3,7 @@
 import {
   WalletIcon,
   HomeIcon,
-  DocumentDuplicateIcon,
+  BoltIcon,
 } from '@heroicons/react/24/outline';
 
 import Link from 'next/link';
@@ -16,9 +16,9 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', href: '/', icon: HomeIcon },
   {
-    name: 'Contracts',
+    name: 'Consumption',
     href: '/dashboard/contracts',
-    icon: DocumentDuplicateIcon,
+    icon: BoltIcon,
   },
   { name: 'Wallet balance', href: '/dashboard/customers', icon: WalletIcon },
 ];

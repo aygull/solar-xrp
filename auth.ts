@@ -8,7 +8,7 @@ import { sql } from '@vercel/postgres';
 import type { User } from '@/app/lib/definitions';
 import bcrypt from 'bcrypt';
  
-async function getUser(email: string): Promise<User | undefined> {
+async function getUser(email: string): Promise<User> {
   try {
     const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
     return user.rows[0];
@@ -41,9 +41,8 @@ export const { auth, signIn, signOut } = NextAuth({
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
           const user = await getUser(email);
-        //   if (!user) {return null;}
+          if (!user) {return null;}
           const passwordsMatch = await bcrypt.compare(password, user!.password);
- 
           if (passwordsMatch) return user;
         }
         console.log('Invalid credentials');
